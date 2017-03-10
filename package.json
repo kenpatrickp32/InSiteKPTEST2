@@ -14,7 +14,8 @@
     "ibm_db": "*",
     "angular": "*",
     "body-parser":"*",
-    "request":"*"
+    "request":"*",
+    "log4js": "*"
 	},
 	"repository": {},
 	"engines": {

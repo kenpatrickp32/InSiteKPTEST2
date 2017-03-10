@@ -13,7 +13,7 @@ var express = require('express');
 var cfenv = require('cfenv');
 
 // create a new express server
-var app = express()
+var app = express();
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
@@ -26,6 +26,13 @@ app.listen(appEnv.port, '0.0.0.0', function() {
   // print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
 });
+
+//declare bodyParser and request
+var bodyParser = require('body-parser');
+var request = require('request');
+
+var port = (process.env.VCAP_APP_PORT || process.env.PORT || 3000);
+var host = (process.env.VCAP_APP_HOST || process.env.HOST || 'localhost');
 
 var ibmdb = require('ibm_db');
 
@@ -64,6 +71,4 @@ res.sendfile('dashboard.html');
 app.get('/riskmgt',function(req,res){
 res.sendfile('riskmgt.html');
 });
-
-
 
