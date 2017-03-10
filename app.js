@@ -29,7 +29,7 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 
 var ibmdb = require('ibm_db');
 
-global.dbConnString = "DATABASE=BLUDB;HOSTNAME=dashdb-entry-yp-dal09-07.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=dash11481;PWD=09ee0b8b23de;"
+global.dbConnString = "DATABASE=BLUDB;HOSTNAME=dashdb-entry-yp-dal09-09.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=dash9734;PWD=N11gF$@SvdaG;"
 
 app.get('/select', function(req, res) {
   ibmdb.open(dbConnString, function(err, conn) {
@@ -39,7 +39,7 @@ app.get('/select', function(req, res) {
     } 
    	console.log("**********CONNECTING TO DATABASE**********");
    	
-      var query = "SELECT MAX_DEPTH_PCT, \"ABSOLUTE_ODOMETER_m\" FROM {$table} CAPSTONE_ILI_DATA_SAMPLE";	//SELECT MAX_DEPTH_PCT, \"ABSOLUTE_ODOMETER_m\" FROM CAPSTONE_ILI_DATA_SAMPLE FETCH FIRST 5 ROWS ONLY
+      var query = "SELECT MAX_DEPTH_PCT, \"ABSOLUTE_ODOMETER_m\" FROM CAPSTONE_ILI_DATA_SAMPLE";	//SELECT MAX_DEPTH_PCT, \"ABSOLUTE_ODOMETER_m\" FROM CAPSTONE_ILI_DATA_SAMPLE FETCH FIRST 5 ROWS ONLY
       conn.query(query, function(err, rows) {
         if (err) {
           console.log("Error: ", err);
