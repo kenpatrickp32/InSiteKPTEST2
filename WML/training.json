@@ -21,7 +21,7 @@
     "setting": {
         "inputs": [
 			{
-                "node": "",
+                "node": "SPSS_MODEL_INPUT_TABLE",
                 "odbc": {
                     "dbRef": "db1",
                     "table": "SPSS_MODEL_INPUT_TABLE"
@@ -38,10 +38,10 @@
     	},
     	"node": "SPSS_MODEL_OUTPUT_TABLE",
     	"attributes": []
-    	}
-    	],
-    	
+   	}
+  ],
+ 
        "reportFormat": "TAB"
-    },
+    }
 }
 

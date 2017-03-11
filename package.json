@@ -15,7 +15,8 @@
     "angular": "*",
     "body-parser":"*",
     "request":"*",
-    "log4js": "*"
+    "log4js": "*",
+    "nconf": "*"
 	},
 	"repository": {},
 	"engines": {
