@@ -72,3 +72,5 @@ app.get('/riskmgt',function(req,res){
 res.sendfile('riskmgt.html');
 });
 
+//require('./WML/')
+
