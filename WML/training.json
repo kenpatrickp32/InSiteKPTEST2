@@ -1,0 +1,47 @@
+{
+
+    "action": "Training",
+    "outputType": "DATA_URL",
+    "model": {
+        "id": "InSiteTest",
+		    "name": "DataValidationGrowthako.str"
+    },
+    "dbDefinitions": {
+         "db1":
+               {
+                   "type": "DashDB",
+                   "db": "BLUDB",
+                   "host": "dashdb-entry-yp-dal09-09.services.dal.bluemix.net",
+                   "options": "Security=SSL",
+                   "password": "N11gF$@SvdaG",
+                   "port": "50000",
+                   "username": "dash9734"
+               }
+    },
+    "setting": {
+        "inputs": [
+			{
+                "node": "",
+                "odbc": {
+                    "dbRef": "db1",
+                    "table": "SPSS_MODEL_INPUT_TABLE"
+                }
+            }
+        
+        ],
+        "exports":[
+        {
+        	"odbc":{
+        		"dbRef":"db1",
+        		"table":"SPSS_MODEL_OUTPUT_TABLE",
+        		"insertMode": "Refresh"
+    	},
+    	"node": "SPSS_MODEL_OUTPUT_TABLE",
+    	"attributes": []
+    	}
+    	],
+    	
+       "reportFormat": "TAB"
+    },
+}
+
