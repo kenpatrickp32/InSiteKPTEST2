@@ -1,0 +1,29 @@
+{
+  "pm-20":
+  {
+    "credentials": {
+      "access_key": "8QDQUHcQkGImNnD1qG7hukba/O35TUcPSEn5uiGwR4CJ2J+f3G57E+jz2Er8f2F9HxGxQ3pIogjgEOjN0TGDTcL0h32gVzPkwMbmHXNpi+EtRAD3XTC/Yxfw6AWK12LvdFj/KiED1UM2HQ72yUZDmBRr0oXNdCNg4d6+yheI0kI=",
+      "url": "https://ibm-watson-ml.mybluemix.net"
+    }
+  },
+  "dashDB":
+  {
+    "name": "dashDB for Analytics-r1",
+    "label": "dashDB",
+    "plan": "Entry",
+    "credentials": {
+      "port": "50000",
+      "db": "BLUDB",
+      "username": "dash9734",
+      "ssljdbcurl": "jdbc:db2://dashdb-entry-yp-dal09-09.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;",
+      "host": "dashdb-entry-yp-dal09-09.services.dal.bluemix.net",
+      "https_url": "https://dashdb-entry-yp-dal09-09.services.dal.bluemix.net:8443",
+      "dsn": "DATABASE=BLUDB;HOSTNAME=dashdb-entry-yp-dal09-09.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=dash9734;PWD=N11gF$@SvdaG;",
+      "hostname": "dashdb-entry-yp-dal09-09.services.dal.bluemix.net",
+      "jdbcurl": "jdbc:db2://dashdb-entry-yp-dal09-09.services.dal.bluemix.net:50000/BLUDB",
+      "ssldsn": "DATABASE=BLUDB;HOSTNAME=dashdb-entry-yp-dal09-09.services.dal.bluemix.net;PORT=50001;PROTOCOL=TCPIP;UID=dash9734;PWD=N11gF$@SvdaG;Security=SSL;",
+      "uri": "db2://dash9734:N11gF$@SvdaG@dashdb-entry-yp-dal09-09.services.dal.bluemix.net:50000/BLUDB",
+      "password": "N11gF$@SvdaG"
+    }
+  }
+}
