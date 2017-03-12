@@ -32,7 +32,7 @@
         "exports":[
         {
         	"odbc":{
-        		"dbRef":"db1",
+        	"dbRef":"db1",
         		"table":"SPSS_MODEL_OUTPUT_TABLE",
         		"insertMode": "Refresh"
     	},

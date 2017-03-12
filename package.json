@@ -15,6 +15,7 @@
     "angular": "*",
     "body-parser":"*",
     "request":"*",
+    "xml2js":"*",
     "nconf": "*"
 	},
 	"repository": {},
