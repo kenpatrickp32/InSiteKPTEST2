@@ -8,7 +8,7 @@
     },
     "dbDefinitions": {
          "db1":
-               {
+         {
                    "type": "DashDB",
                    "db": "BLUDB",
                    "host": "dashdb-entry-yp-dal09-09.services.dal.bluemix.net",
@@ -16,15 +16,23 @@
                    "password": "N11gF$@SvdaG",
                    "port": "50000",
                    "username": "dash9734"
-               }
+                   }
     },
+    
     "setting": {
         "inputs": [
-			{
-                "node": "SPSS_MODEL_INPUT_TABLE",
+        {
+        	"node": "SPSS_MODEL_INPUT_TABLE",
                 "odbc": {
                     "dbRef": "db1",
                     "table": "SPSS_MODEL_INPUT_TABLE"
+                }
+            },
+        {
+        	"node": "PIPE_PROPERTIES",
+                "odbc": {
+                    "dbRef": "db1",
+                    "table": "PIPE_PROPERTIES"
                 }
             }
         

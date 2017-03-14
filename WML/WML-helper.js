@@ -12,7 +12,6 @@ let db1Port = config('dashDB:credentials:port');
 let db1Username = config('dashDB:credentials:username');
 
 function getJobJson(action, modelId, modelName, tableName, inputsNode) {
-  // TODO error handling
   let training = require('./training.json');
   return eval('`' + JSON.stringify(training) + '`');
 }
