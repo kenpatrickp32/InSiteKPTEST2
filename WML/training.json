@@ -4,7 +4,7 @@
     "outputType": "DATA_URL",
     "model": {
         "id": "InSiteTest",
-		    "name": "DataValidationGrowthako.str"
+		    "name": "PembinaSPSS.str"
     },
     "dbDefinitions": {
          "db1":
@@ -29,10 +29,10 @@
                 }
             },
         {
-        	"node": "PIPE_PROPERTIES",
+        	"node": "DIG_HISTORY",
                 "odbc": {
                     "dbRef": "db1",
-                    "table": "PIPE_PROPERTIES"
+                    "table": "DIG_HISTORY"
                 }
             }
         

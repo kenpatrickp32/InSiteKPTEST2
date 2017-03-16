@@ -16,6 +16,8 @@
     "body-parser":"*",
     "request":"*",
     "xml2js":"*",
+    "log4js":"*",
+    "morgan":"*",
     "nconf": "*"
 	},
 	"repository": {},

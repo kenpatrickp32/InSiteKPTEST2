@@ -2,3 +2,5 @@
 
 'use strict';
 
+var WMLClient = require('./WML-client');
+var request = require('request');
