@@ -18,7 +18,8 @@
     "xml2js":"*",
     "log4js":"*",
     "morgan":"*",
-    "nconf": "*"
+    "nconf": "*",
+    "node-uuid":"*"
 	},
 	"repository": {},
 	"engines": {

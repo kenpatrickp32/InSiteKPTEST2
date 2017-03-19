@@ -5,7 +5,6 @@
 const request=require('request');
 const fs=require('fs');
 const WMLhelper=require('./WML-helper');
-const log4js = require;
 
 var WatsonService=module.exports=function(WMLServiceCredentials){
 	let credentials = WMLServiceCredentials;
@@ -189,6 +188,10 @@ WatsonService.prototype ={
 		deleteModel: function (fileId, callback){
 			let url = this._constructURL('model/'+fileId);
 			request.delete(url,this._handleResponse(url, callback));
+		},
+		deleteFile: function (fileId, callback){
+			let url = this._constructURL('file/'+fileId);
+			request.delete(url, this._handleResponse(url, callback));
 		},
 		
 		uploadFile: function (fileId, filePath, callback){

@@ -28,7 +28,7 @@ function _getVcapServicesAsJson(){
 	let vcapSvcJSON;
 	//Parse VCAP Services into JSON
 	if (vcapSvcRaw){
-		console.log('Parsin JSON from VCAP_SERVICES environment variable');
+		console.log('Parsing JSON from VCAP_SERVICES environment variable');
 		try{
 			vcapSvcJSON = JSON.parse(vcapSvcRaw);
 			if(!vcapSvcJSON){
