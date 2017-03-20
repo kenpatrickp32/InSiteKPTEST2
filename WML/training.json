@@ -1,52 +1,52 @@
 {
 
-    "action": "Training",
+    "action": "${action}",
     "outputType": "DATA_URL",
     "model": {
-        "id": "InSiteTest",
-		    "name": "PembinaSPSS.str"
+        "id": "${modelId}",
+		    "name": "${modelName}"
     },
     "dbDefinitions": {
          "db1":
          {
                    "type": "DashDB",
                    "db": "BLUDB",
-                   "host": "dashdb-entry-yp-dal09-09.services.dal.bluemix.net",
-                   "options": "Security=SSL",
-                   "password": "N11gF$@SvdaG",
-                   "port": "50000",
-                   "username": "dash9734"
+                   "host": "${db1Host}",
+                   "options": "",
+                   "password": "${db1Password}",
+                   "port": "${db2Port}",
+                   "username": "${db2Username}"
                    }
     },
     
     "setting": {
         "inputs": [
         {
-        	"node": "SPSS_MODEL_INPUT_TABLE",
+        "node": "${inputsNode1}",
                 "odbc": {
-                    "dbRef": "db1",
-                    "table": "SPSS_MODEL_INPUT_TABLE"
+                    "dbRef": "db2",
+                    "table": "${tableName1}"
                 }
             },
         {
-        	"node": "DIG_HISTORY",
+        "node": "${inputsNode2}",
                 "odbc": {
-                    "dbRef": "db1",
-                    "table": "DIG_HISTORY"
+                    "dbRef": "db2",
+                    "table": "${tableName2}"
                 }
             }
         
         ],
         "exports":[
         {
-        	"odbc":{
-        	"dbRef":"db1",
-        		"table":"SPSS_MODEL_OUTPUT_TABLE",
-        		"insertMode": "Refresh"
-    	},
-    	"node": "SPSS_MODEL_OUTPUT_TABLE",
-    	"attributes": []
-   	}
+        "odbc":{
+        "dbRef":"db2",
+        "table":"SPSS_MODEL_OUTPUT_TABLE",
+        "insertMode": "Refresh"
+   },
+    "node": "SPSS_MODEL_OUTPUT_TABLE",
+    "attributes": []
+  }
   ],
  
        "reportFormat": "TAB"
