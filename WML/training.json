@@ -7,13 +7,13 @@
 		    "name": "${modelName}"
     },
     "dbDefinitions": {
-         "db1":
+         "db2":
          {
                    "type": "DashDB",
                    "db": "BLUDB",
-                   "host": "${db1Host}",
+                   "host": "${db2Host}",
                    "options": "",
-                   "password": "${db1Password}",
+                   "password": "${db2Password}",
                    "port": "${db2Port}",
                    "username": "${db2Username}"
                    }
@@ -34,6 +34,13 @@
                     "dbRef": "db2",
                     "table": "${tableName2}"
                 }
+            },
+         {
+        "node": "${inputsNode3}",
+                "odbc": {
+                    "dbRef": "db2",
+                    "table": "${tableName3}"
+                }
             }
         
         ],
@@ -41,10 +48,10 @@
         {
         "odbc":{
         "dbRef":"db2",
-        "table":"SPSS_MODEL_OUTPUT_TABLE",
-        "insertMode": "Refresh"
+        "table":"${tableName4}",
+        "insertMode": "${insertMode}"
    },
-    "node": "SPSS_MODEL_OUTPUT_TABLE",
+    "node": "${outputsNode}",
     "attributes": []
   }
   ],

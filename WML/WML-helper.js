@@ -4,17 +4,16 @@
 'use strict';
 
 const config = require('../config');
-//since 
 const parseString = require('xml2js').parseString;
 
-/*
-let db1Host = config('dashDB:credentials:host');
-let db1Password = config('dashDB:credentials:password');
-let db1Port = config('dashDB:credentials:port');
-let db1Username = config('dashDB:credentials:username');
-*/
 
-function getJobJson(action, modelId, modelName, tableName, inputsNode) {
+let db2Host = config('dashDB:credentials:host');
+let db2Password = config('dashDB:credentials:password');
+let db2Port = config('dashDB:credentials:port');
+let db2Username = config('dashDB:credentials:username');
+
+
+function getJobJson(action, modelId, modelName, tableName1, inputsNode1, tableName2, inputsNode2, tableName3, outputsNode, insertMode) {
   let training = require('./training.json');
   return eval('`' + JSON.stringify(training) + '`');
 }

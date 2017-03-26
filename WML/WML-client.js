@@ -11,7 +11,7 @@ var WatsonService=module.exports=function(WMLServiceCredentials){
 	//check to see if credentials are undefined and response to that
 	if(typeof credentials == 'undefined' && credentials == null){
 		let config = require('../config');
-		let WMLServiceName = process.env.WML_SERVICE_LABEL ? process.env.PA_SERVICE_LABEL : 'pm-20';
+		let WMLServiceName = process.env.WML_SERVICE_LABEL ? process.env.WML_SERVICE_LABEL : 'pm-20';
 		let val = config(WMLServiceName);
 		if (typeof val !== 'undefined' && val!== null){
 			credentials = val.credentials;
@@ -145,7 +145,7 @@ WatsonService.prototype ={
 				if (!error && response.statusCode===200){
 					var scoreResponse = JSON.parse(body);
 					if (scoreResponse.flag === false){
-						console.log("error in getScore() during scoring stream")
+						console.log("error in getScore() during scoring stream");
 						return callback('Watson Machine Learning service error: ' + scoreResponse.message);
 					}
 					return callback(null, scoreResponse);
@@ -212,14 +212,14 @@ WatsonService.prototype ={
 		},
 		
 		//this is the prototype for defining the job description i.e. API call for creating a batch job
-		createJob: function(action, jobId, modelId, modelName, tableName, inputsNode, callback){
+		createJob: function(action, jobId, modelId, modelName, tableName1, inputsNode1, tableName2, inputsNode2, tableName3, outputsNode, insertMode, callback){
 			let url = this._constructURL('./jobs'+jobId);
 			let params ={
 				headers:{'content-type':'application/json'},
 				url: url,
-				body: WMLhelper.getJobJson(action, modelId, modelName, tableName, inputsNode)
+				body: WMLhelper.getJobJson(action, modelId, modelName, tableName1, inputsNode1, tableName2, inputsNode2, tableName3, outputsNode, insertMode)
 			};
-			this.put(params, function(error, response,body){
+			this.put(params, function(error, response, body){
 				if (error){
 					return callback(error);
 				}
